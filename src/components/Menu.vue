@@ -1,10 +1,13 @@
-<script setup></script>
+<script setup>
+const emit = defineEmits(["toggleShowMenu"]);
+</script>
 
 <template>
   <ul class="text-green-600 font-normal drop-shadow-lg pt-8">
     <li>
       <RouterLink
-        to="/"
+        to="/about"
+        @click="$emit('toggleShowMenu')"
         class="bg-white rounded-full p-3 hover:bg-blue-700 hover:text-white"
         >About</RouterLink
       >
